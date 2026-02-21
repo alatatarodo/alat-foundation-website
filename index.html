@@ -246,5 +246,35 @@
         </div>
     </footer>
 
+    <script>
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+<style>
+  .swiper-button-next, .swiper-button-prev {
+    background-color: rgba(251, 176, 64, 0.3); /* Transparent Alat Orange */
+    padding: 30px;
+    border-radius: 50%;
+    transform: scale(0.6);
+  }
+  .swiper-pagination-bullet-active {
+    background: #FBB040 !important; /* Alat Orange dots */
+  }
+</style>
+
 </body>
 </html>
