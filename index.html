@@ -7,77 +7,100 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Poppins', sans-serif; }
+        body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
         .bg-alat-orange { background-color: #FBB040; }
         .text-alat-orange { color: #FBB040; }
-        .bg-alat-grey { background-color: #6D6E71; }
+        .border-alat-orange { border-color: #FBB040; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-white text-gray-800">
 
-    <!-- Navigation -->
-    <nav class="flex items-center justify-between px-8 py-4 bg-white shadow-sm sticky top-0 z-50">
-        <div class="text-2xl font-bold text-alat-orange">ALAT FOUNDATION</div>
-        <div class="hidden md:flex space-x-6 font-medium text-gray-600">
-            <a href="#" class="hover:text-alat-orange">Home</a>
-            <a href="#about" class="hover:text-alat-orange">About Us</a>
-            <a href="#impact" class="hover:text-alat-orange">Impact</a>
-            <a href="#donate" class="bg-alat-orange text-white px-6 py-2 rounded-full hover:bg-orange-400 transition">Donate Now</a>
+    <!-- Navbar -->
+    <nav class="flex items-center justify-between px-6 py-4 bg-white sticky top-0 z-50 shadow-sm">
+        <div class="flex items-center">
+            <!-- Your logo will go here -->
+            <span class="text-xl font-bold tracking-tighter text-gray-700">ALAT <span class="text-alat-orange">FOUNDATION</span></span>
         </div>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#about" class="hover:text-alat-orange">Our Story</a>
+            <a href="#goals" class="hover:text-alat-orange">Our Goals</a>
+            <a href="https://instagram.com/alatfoundation" target="_blank" class="hover:text-alat-orange">Instagram</a>
+        </div>
+        <a href="mailto:your-email@example.com" class="bg-alat-orange text-white px-6 py-2 rounded-full font-bold shadow-lg hover:bg-orange-400 transition">Contact Us</a>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative h-[80vh] flex items-center justify-center text-center text-white">
-        <div class="absolute inset-0 bg-black opacity-50"></div>
-        <!-- Replace YOUR_IMAGE_URL with the link to your photo later -->
-        <div class="absolute inset-0 z-[-1] bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');"></div>
-        
+    <section class="relative h-[85vh] flex items-center justify-center text-center text-white bg-gray-900">
+        <!-- We will put your image of you holding the girl here -->
+        <div class="absolute inset-0 opacity-60 bg-cover bg-center" style="background-image: url('https://i.postimg.cc/85m6p5p1/hero-image.jpg');"></div>
         <div class="relative z-10 px-4">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Clothing a Child.<br>Building a Leader.</h1>
-            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">We believe confidence starts with a stitch. Helping every child stand tall through dignity and self-esteem.</p>
-            <div class="space-x-4">
-                <a href="#donate" class="bg-alat-orange px-8 py-3 rounded-full font-bold text-lg hover:bg-orange-400">Get Involved</a>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Clothing a Child.<br>Building a Leader.</h1>
+            <p class="text-lg md:text-2xl mb-10 max-w-3xl mx-auto font-light">Building self-esteem in impoverished children through dignity and the "Clothe a Child" program.</p>
+            <a href="#about" class="bg-alat-orange text-white px-10 py-4 rounded-full font-bold text-xl shadow-2xl hover:scale-105 transition transform">See Our Impact</a>
+        </div>
+    </section>
+
+    <!-- Founder's Message -->
+    <section id="about" class="py-20 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <h2 class="text-alat-orange font-bold tracking-widest uppercase mb-2">Our Founder's Story</h2>
+                <h3 class="text-4xl font-bold mb-6 text-gray-900">From the Shell to the Stage.</h3>
+                <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                    Growing up, I didn't have access to good clothing or the basics a child should have. This negatively impacted my self-esteem, keeping me in my shell and hiding my God-given talents.
+                </p>
+                <p class="text-gray-900 italic font-medium text-xl border-l-4 border-alat-orange pl-6 mb-6">
+                    "I started this foundation so that no child has to hide because of the fabric they wear. Good clothing adds to confidence, which translates to self-esteem."
+                </p>
+                <p class="font-bold text-gray-800">— Alat Oladimeji</p>
+            </div>
+            <div class="order-1 md:order-2">
+                <!-- Image of you with the girl making peace signs -->
+                <div class="rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition duration-500">
+                    <img src="https://i.postimg.cc/85m6p5p1/hero-image.jpg" alt="Alat with child" class="w-full">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-8 max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-bold mb-6 border-b-4 border-alat-orange inline-block">Our Story</h2>
-                <p class="mb-4 text-gray-600 leading-relaxed">Growing up, I didn't have access to good clothing or the basic things a child should have. This negatively impacted my self-esteem, keeping me in my shell.</p>
-                <p class="mb-4 text-gray-600 leading-relaxed font-semibold text-alat-orange">"I started this foundation so that no child has to hide their God-given talents because of the clothes they wear."</p>
-                <p class="text-gray-600 leading-relaxed">— Alat Oladimeji, Founder</p>
+    <!-- SDG Section -->
+    <section id="goals" class="bg-gray-50 py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Aligned with Global Goals</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Our mission is strategically designed to support the UN Sustainable Development Goals.</p>
             </div>
-            <div class="bg-gray-200 h-80 rounded-2xl shadow-xl flex items-center justify-center text-gray-400">[Founder Photo Here]</div>
-        </div>
-    </section>
-
-    <!-- SDG Pillars -->
-    <section class="bg-alat-grey text-white py-20 px-8">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-12">Our SDG Goals</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 bg-white/10 rounded-xl">
-                    <h3 class="text-xl font-bold mb-4 text-alat-orange">SDG 2: Zero Hunger</h3>
-                    <p class="text-sm opacity-80">Nutritional support because a hungry child cannot focus on their future.</p>
+                <div class="bg-white p-10 rounded-2xl shadow-sm border-b-8 border-yellow-500">
+                    <div class="text-4xl mb-6">🥗</div>
+                    <h4 class="text-xl font-bold mb-4">SDG 2: Zero Hunger</h4>
+                    <p class="text-gray-500 text-sm">Providing nutritional support because a child cannot grow or learn on an empty stomach.</p>
                 </div>
-                <div class="p-8 bg-white/10 rounded-xl">
-                    <h3 class="text-xl font-bold mb-4 text-alat-orange">SDG 3: Well-being</h3>
-                    <p class="text-sm opacity-80">Promoting mental health by building self-confidence from the outside in.</p>
+                <div class="bg-white p-10 rounded-2xl shadow-sm border-b-8 border-green-500">
+                    <div class="text-4xl mb-6">💪</div>
+                    <h4 class="text-xl font-bold mb-4">SDG 3: Well-being</h4>
+                    <p class="text-gray-500 text-sm">Focusing on mental health and hygiene to ensure children thrive physically and emotionally.</p>
                 </div>
-                <div class="p-8 bg-white/10 rounded-xl">
-                    <h3 class="text-xl font-bold mb-4 text-alat-orange">SDG 4: Education</h3>
-                    <p class="text-sm opacity-80">Removing barriers to school attendance by providing quality uniforms.</p>
+                <div class="bg-white p-10 rounded-2xl shadow-sm border-b-8 border-red-500">
+                    <div class="text-4xl mb-6">📚</div>
+                    <h4 class="text-xl font-bold mb-4">SDG 4: Education</h4>
+                    <p class="text-gray-500 text-sm">Providing school attire that removes the shame of poverty and encourages attendance.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 text-center border-t border-gray-200">
-        <p class="text-gray-500">&copy; 2024 Alat Oladimeji Foundation. All rights reserved.</p>
+    <footer class="py-12 bg-gray-900 text-white text-center">
+        <div class="mb-8">
+            <span class="text-2xl font-bold">ALAT FOUNDATION</span>
+            <p class="text-gray-400 mt-2">Clothe a Child. Build a Leader.</p>
+        </div>
+        <div class="flex justify-center space-x-6 mb-8 text-gray-400">
+            <a href="https://instagram.com/alatfoundation" class="hover:text-alat-orange">Instagram</a>
+            <a href="mailto:your-email@example.com" class="hover:text-alat-orange">Email Us</a>
+        </div>
+        <p class="text-xs text-gray-500">&copy; 2024 Alat Oladimeji Foundation. Registered NGO.</p>
     </footer>
 
 </body>
