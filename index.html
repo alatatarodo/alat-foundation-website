@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alat Oladimeji Foundation | Clothe a Child</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>    
     <style>
         body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
         .bg-alat-orange { background-color: #FBB040; }
         .text-alat-orange { color: #FBB040; }
         .border-alat-orange { border-color: #FBB040; }
+        .swiper-button-next, .swiper-button-prev {
+            background-color: rgba(251, 176, 64, 0.3);
+            padding: 30px;
+            border-radius: 50%;
+            transform: scale(0.6);
+            color: white !important;
+        }
+        .swiper-pagination-bullet-active { background: #FBB040 !important; }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -20,26 +28,21 @@
     <!-- Navbar -->
     <nav class="flex items-center justify-between px-6 py-4 bg-white sticky top-0 z-50 shadow-sm">
         <div class="flex items-center">
-            <!-- If you have your logo link from Postimages, replace the src below -->
-            <img src="https://i.postimg.cc/BvmR7hjb/Untitled-design-(5).png" alt="Alat Foundation Logo" class="h-20 md:h-24">
+            <img src="https://i.postimg.cc/BvmR7hjb/Untitled-design-(5).png" alt="Alat Foundation Logo" class="h-16 md:h-20">
         </div>
-        <div class="hidden md:flex space-x-8 font-medium">
-            <a href="#about" class="hover:text-alat-orange transition">Our Story</a>
-            <a href="#team" class="hover:text-alat-orange transition">The Team</a>
-            <a href="#goals" class="hover:text-alat-orange transition">Our Goals</a>
-            <a href="#program" class="hover:text-alat-orange transition">Clothe a Child</a>
-             <a href="#donate" class="hover:text-alat-orange transition">Support Us</a>
-            <a href="https://instagram.com/alatfoundation" target="_blank" class="hover:text-alat-orange transition">Instagram</a>
+        <div class="hidden md:flex space-x-6 lg:space-x-8 font-medium">
+            <a href="#about" class="hover:text-alat-orange transition text-sm lg:text-base">Our Story</a>
+            <a href="#team" class="hover:text-alat-orange transition text-sm lg:text-base">The Team</a>
+            <a href="#program" class="hover:text-alat-orange transition text-sm lg:text-base">Clothe a Child</a>
+            <a href="#goals" class="hover:text-alat-orange transition text-sm lg:text-base">Our Goals</a>
+            <a href="#donate" class="hover:text-alat-orange transition text-sm lg:text-base text-alat-orange font-bold">Support Us</a>
         </div>
-        <a href="mailto:info@alatfoundation.org" class="bg-alat-orange text-white px-6 py-2 rounded-full font-bold shadow-lg hover:bg-orange-400 transition">Contact Us</a>
+        <a href="mailto:info@alatfoundation.org" class="bg-alat-orange text-white px-5 py-2 rounded-full font-bold shadow-lg hover:bg-orange-400 transition text-sm">Contact Us</a>
     </nav>
 
-    <!-- Hero Section: Split Layout -->
-  <!-- Hero Section: Split Layout with Slider -->
-    <section class="relative min-h-[90vh] flex flex-col md:flex-row items-center bg-gray-50 overflow-hidden">
-        
-        <!-- Left Side: Text -->
-       <div class="w-full md:w-1/2 px-6 py-12 md:px-16 z-20 bg-white order-2 md:order-1">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col md:flex-row items-center bg-gray-50 overflow-hidden">
+        <div class="w-full md:w-1/2 px-6 py-12 md:px-16 z-20 bg-white order-2 md:order-1">
             <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
                 Clothing a <span class="text-alat-orange">Child.</span><br>
                 Building a <span class="text-alat-orange">Leader.</span>
@@ -48,52 +51,59 @@
                 Building self-esteem in impoverished children through dignity and the "Clothe a Child" program. We believe confidence starts with a stitch.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-                <a href="#about" class="bg-alat-orange text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-orange-400 transition text-center">Our Impact</a>
-                <a href="https://instagram.com/alatfoundation" target="_blank" class="border-2 border-alat-orange text-alat-orange px-8 py-4 rounded-full font-bold text-lg hover:bg-alat-orange hover:text-white transition text-center">Follow Our Journey</a>
+                <a href="#donate" class="bg-alat-orange text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-orange-400 transition text-center">Support a Child</a>
+                <a href="#about" class="border-2 border-alat-orange text-alat-orange px-8 py-4 rounded-full font-bold text-lg hover:bg-alat-orange hover:text-white transition text-center">Our Story</a>
             </div>
         </div>
 
-        <!-- Hero Section: Split Layout with Slider -->
-         <div class="w-full md:w-1/2 h-[55vh] md:h-screen relative order-1 md:order-2">
+        <div class="w-full md:w-1/2 h-[50vh] md:h-screen relative order-1 md:order-2">
             <div class="swiper mySwiper h-full w-full">
                 <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide bg-cover bg-top" style="background-image: url('https://i.postimg.cc/NFKQ8dw3/Whats-App-Image-2026-02-21-at-19-36-27.jpg');"></div>
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide bg-cover bg-top" style="background-image: url('https://i.postimg.cc/prfRcg3n/Whats-App-Image-2026-02-21-at-17-53-11.jpg');"></div>
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide bg-cover bg-top" style="background-image: url('https://i.postimg.cc/Gh7r9JP2/Whats-App-Image-2026-02-21-at-17-58-42.jpg');"></div>
-                    <!-- Slide 4 -->
-                    <div class="swiper-slide bg-cover bg-top" style="background-image: url('https://i.postimg.cc/Vs4PHBVW/Whats-App-Image-2026-02-21-at-17-58-07.jpg');"></div>
-                    <!-- Slide 5 -->
-                    <div class="swiper-slide bg-cover bg-top" style="background-image: url('https://i.postimg.cc/ZK9sF8tL/Whats-App-Image-2026-02-21-at-17-58-22.jpg');"></div>
+                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://i.postimg.cc/NFKQ8dw3/Whats-App-Image-2026-02-21-at-19-36-27.jpg');"></div>
+                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://i.postimg.cc/prfRcg3n/Whats-App-Image-2026-02-21-at-17-53-11.jpg');"></div>
+                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://i.postimg.cc/Gh7r9JP2/Whats-App-Image-2026-02-21-at-17-58-42.jpg');"></div>
+                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://i.postimg.cc/Vs4PHBVW/Whats-App-Image-2026-02-21-at-17-58-07.jpg');"></div>
+                    <div class="swiper-slide bg-cover bg-center" style="background-image: url('https://i.postimg.cc/ZK9sF8tL/Whats-App-Image-2026-02-21-at-17-58-22.jpg');"></div>
                 </div>
-                <!-- Slider Controls -->
-                <div class="swiper-button-next text-white"></div>
-                <div class="swiper-button-prev text-white"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
             </div>
         </div>
-
     </section>
 
-<!-- About Us Section -->
-    <section id="about" class="py-24 px-6 bg-white">
+    <!-- About Section (Our Story) -->
+    <section id="about" class="py-24 px-6 bg-white border-b border-gray-100">
         <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-alat-orange font-bold tracking-widest uppercase mb-3 text-sm">Our Why</h2>
+                    <h3 class="text-4xl font-extrabold mb-6 text-gray-900 leading-tight">Dignity is not a luxury. It is a foundation.</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Growing up, I didn't have the luxury of good clothing or basic items a child needs to feel prepared. I remember staying in my shell, not finding full expression of my God-given abilities because I lacked the confidence to stand out.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed font-semibold italic text-gray-900 border-l-4 border-alat-orange pl-6">
+                        "I started this foundation to bridge that gap. We provide the vibrance that allows children to break out of their shells and share their talents with the world."
+                    </p>
+                    <p class="mt-4 font-bold text-gray-900">— Alat Oladimeji, Founder</p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="https://i.postimg.cc/zft42L9v/Whats-App-Image-2026-02-21-at-08-03-01.jpg" alt="Alat Outreach" class="rounded-3xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Meet the Team Section (7 Members) -->
+    <!-- Meet the Team Section -->
     <section id="team" class="py-24 px-6 bg-gray-50">
         <div class="max-w-6xl mx-auto">
-            
             <div class="text-center mb-16">
                 <h2 class="text-alat-orange font-bold uppercase tracking-widest text-sm mb-3">Our People</h2>
-                <h3 class="text-4xl font-extrabold text-gray-900 leading-tight">The Heart of the Mission</h3>
-                <p class="text-gray-500 max-w-2xl mx-auto mt-4 text-lg">A dedicated team of 7 visionaries and volunteers committed to building a brighter future for every child.</p>
+                <h3 class="text-4xl font-extrabold text-gray-900">The Heart of the Mission</h3>
+                <p class="text-gray-500 max-w-2xl mx-auto mt-4 text-lg text-center">A dedicated team of visionaries and volunteers committed to building a brighter future.</p>
             </div>
 
-            <!-- Team Grid -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 justify-items-center">
-                
                 <!-- Member 1: Founder -->
                 <div class="text-center group max-w-xs">
                     <div class="relative w-44 h-44 mx-auto mb-6">
@@ -101,232 +111,88 @@
                         <img src="https://i.postimg.cc/zft42L9v/Whats-App-Image-2026-02-21-at-08-03-01.jpg" alt="Founder" class="relative w-44 h-44 rounded-full object-cover border-4 border-white shadow-lg">
                     </div>
                     <h4 class="text-2xl font-bold text-gray-900">Alat Oladimeji</h4>
-                    <p class="text-alat-orange font-bold mb-3 uppercase text-xs tracking-widest">Founder / Visionary</p>
-                    <p class="text-gray-600 text-sm leading-relaxed">Driven by lived experience to ensure every child finds their full expression.</p>
+                    <p class="text-alat-orange font-bold mb-1 uppercase text-xs">Founder / Visionary</p>
                 </div>
 
-                <!-- Member 2 -->
+                <!-- Repeat this for members 2-7. Replace placeholders as needed. -->
                 <div class="text-center group max-w-xs">
                     <div class="relative w-44 h-44 mx-auto mb-6">
-                        <div class="absolute inset-0 bg-gray-200 rounded-full -rotate-6 group-hover:-rotate-12 transition"></div>
+                        <div class="absolute inset-0 bg-gray-200 rounded-full -rotate-6 transition"></div>
                         <img src="https://via.placeholder.com/300" alt="Team Member" class="relative w-44 h-44 rounded-full object-cover border-4 border-white shadow-lg grayscale hover:grayscale-0 transition">
                     </div>
                     <h4 class="text-2xl font-bold text-gray-900">Full Name</h4>
-                    <p class="text-alat-orange font-bold mb-3 uppercase text-xs tracking-widest">Role Title</p>
-                    <p class="text-gray-600 text-sm leading-relaxed">Brief one-sentence bio about their passion for the foundation.</p>
+                    <p class="text-alat-orange font-bold mb-1 uppercase text-xs">Role Title</p>
                 </div>
-
-                <!-- Member 3 -->
                 <div class="text-center group max-w-xs">
                     <div class="relative w-44 h-44 mx-auto mb-6">
-                        <div class="absolute inset-0 bg-gray-200 rounded-full rotate-3 group-hover:rotate-6 transition"></div>
+                        <div class="absolute inset-0 bg-gray-200 rounded-full rotate-3 transition"></div>
                         <img src="https://via.placeholder.com/300" alt="Team Member" class="relative w-44 h-44 rounded-full object-cover border-4 border-white shadow-lg grayscale hover:grayscale-0 transition">
                     </div>
                     <h4 class="text-2xl font-bold text-gray-900">Full Name</h4>
-                    <p class="text-alat-orange font-bold mb-3 uppercase text-xs tracking-widest">Role Title</p>
-                    <p class="text-gray-600 text-sm leading-relaxed">Brief one-sentence bio about their passion for the foundation.</p>
+                    <p class="text-alat-orange font-bold mb-1 uppercase text-xs">Role Title</p>
                 </div>
-
-                <!-- Member 4 -->
-                <div class="text-center group max-w-xs">
-                    <div class="relative w-44 h-44 mx-auto mb-6">
-                        <div class="absolute inset-0 bg-gray-200 rounded-full rotate-12 group-hover:rotate-0 transition"></div>
-                        <img src="https://via.placeholder.com/300" alt="Team Member" class="relative w-44 h-44 rounded-full object-cover border-4 border-white shadow-lg grayscale hover:grayscale-0 transition">
-                    </div>
-                    <h4 class="text-2xl font-bold text-gray-900">Full Name</h4>
-                    <p class="text-alat-orange font-bold mb-3 uppercase text-xs tracking-widest">Role Title</p>
-                    <p class="text-gray-600 text-sm leading-relaxed">Brief one-sentence bio about their passion for the foundation.</p>
-                </div>
-
-                <!-- Member 5 -->
-                <div class="text-center group max-w-xs">
-                    <div class="relative w-44 h-44 mx-auto mb-6">
-                        <div class="absolute inset-0 bg-gray-200 rounded-full -rotate-12 group-hover:rotate-0 transition"></div>
-                        <img src="https://via.placeholder.com/300" alt="Team Member" class="relative w-44 h-44 rounded-full object-cover border-4 border-white shadow-lg grayscale hover:grayscale-0 transition">
-                    </div>
-                    <h4 class="text-2xl font-bold text-gray-900">Full Name</h4>
-                    <p class="text-alat-orange font-bold mb-3 uppercase text-xs tracking-widest">Role Title</p>
-                    <p class="text-gray-600 text-sm leading-relaxed">Brief one-sentence bio about their passion for the foundation.</p>
-                </div>
-
-                <!-- Member 6 -->
-                <div class="text-center group max-w-xs">
-                    <div class="relative w-44 h-44 mx-auto mb-6">
-                        <div class="absolute inset-0 bg-gray-200 rounded-full rotate-6 group-hover:rotate-12 transition"></div>
-                        <img src="https://via.placeholder.com/300" alt="Team Member" class="relative w-44 h-44 rounded-full object-cover border-4 border-white shadow-lg grayscale hover:grayscale-0 transition">
-                    </div>
-                    <h4 class="text-2xl font-bold text-gray-900">Full Name</h4>
-                    <p class="text-alat-orange font-bold mb-3 uppercase text-xs tracking-widest">Role Title</p>
-                    <p class="text-gray-600 text-sm leading-relaxed">Brief one-sentence bio about their passion for the foundation.</p>
-                </div>
-
-                <!-- Member 7 (This one will center itself on larger screens) -->
-                <div class="text-center group max-w-xs lg:col-start-2">
-                    <div class="relative w-44 h-44 mx-auto mb-6">
-                        <div class="absolute inset-0 bg-gray-200 rounded-full rotate-2 group-hover:rotate-45 transition duration-500"></div>
-                        <img src="https://via.placeholder.com/300" alt="Team Member" class="relative w-44 h-44 rounded-full object-cover border-4 border-white shadow-lg grayscale hover:grayscale-0 transition">
-                    </div>
-                    <h4 class="text-2xl font-bold text-gray-900">Full Name</h4>
-                    <p class="text-alat-orange font-bold mb-3 uppercase text-xs tracking-widest">Role Title</p>
-                    <p class="text-gray-600 text-sm leading-relaxed">Brief one-sentence bio about their passion for the foundation.</p>
-                </div>
-
+                <!-- Add members 4, 5, 6, 7 following same structure -->
             </div>
-        </div>
-    </section>
-            
-            <!-- Part 1: The Heart of the Mission -->
-            <div class="grid md:grid-cols-2 gap-16 items-center mb-24">
-                <div class="order-2 md:order-1">
-                    <h2 class="text-alat-orange font-bold tracking-widest uppercase mb-3">Our Why</h2>
-                    <h3 class="text-4xl md:text-5xl font-extrabold mb-6 text-gray-900 leading-tight">Dignity is not a luxury. <br><span class="text-alat-orange text-3xl">It is a foundation.</span></h3>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
-                        At the Alat Oladimeji Foundation, we believe that every child deserves to walk with their head held high. We don't just see clothing as a basic necessity—we see it as a psychological tool.
-                    </p>
-                    <div class="bg-gray-50 p-6 rounded-2xl border-l-8 border-alat-orange shadow-sm">
-                        <p class="text-gray-900 font-semibold italic text-lg">
-                            "When a child is dressed in clean, decent clothing, a shift happens internally. They stop hiding. They start expressing."
-                        </p>
-                    </div>
-                </div>
-                <div class="order-1 md:order-2">
-                    <img src="https://i.postimg.cc/zft42L9v/Whats-App-Image-2026-02-21-at-08-03-01.jpg" alt="Alat with child" class="rounded-3xl shadow-2xl">
-                </div>
-            </div>
-
-            <!-- Part 2: The Founder's Journey (Your Story) -->
-            <div class="bg-alat-grey/10 p-8 md:p-16 rounded-[3rem] border border-gray-100 mb-24">
-                <div class="max-w-3xl mx-auto text-center">
-                    <h2 class="text-3xl font-bold mb-8 text-gray-900">A Message from Our Founder</h2>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-6 text-left">
-                        Growing up, I didn't have the luxury of good clothing or the basic items every child needs to feel prepared for the world. I remember the feeling of staying in my shell, not finding the full expression of my God-given abilities because I lacked the confidence to stand out.
-                    </p>
-                    <p class="text-gray-600 text-lg leading-relaxed mb-6 text-left">
-                        This experience stayed with me. I realized that poverty doesn't just take away resources; it takes away a child's voice. I started this foundation to bridge that gap. We provide the "Alat" (the joy and vibrance) that allows children to break out of their shells and share their talents with the world.
-                    </p>
-                    <p class="font-bold text-xl text-gray-900">— Alat Oladimeji</p>
-                </div>
-            </div>
-
-            <!-- Part 3: Vision & Mission Cards -->
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="p-10 bg-white border border-gray-100 shadow-xl rounded-3xl hover:border-alat-orange transition duration-300">
-                    <div class="w-12 h-12 bg-alat-orange/20 rounded-full flex items-center justify-center mb-6">
-                        <span class="text-2xl">👁️</span>
-                    </div>
-                    <h4 class="text-2xl font-bold mb-4">Our Vision</h4>
-                    <p class="text-gray-600 leading-relaxed">
-                        To build a world where every child possesses the self-confidence necessary to break the cycle of poverty and reach their full potential.
-                    </p>
-                </div>
-                <div class="p-10 bg-white border border-gray-100 shadow-xl rounded-3xl hover:border-alat-orange transition duration-300">
-                    <div class="w-12 h-12 bg-alat-orange/20 rounded-full flex items-center justify-center mb-6">
-                        <span class="text-2xl">🚀</span>
-                    </div>
-                    <h4 class="text-2xl font-bold mb-4">Our Mission</h4>
-                    <p class="text-gray-600 leading-relaxed">
-                        To empower impoverished children through our flagship "Clothe a Child" program, nutritional support, and educational advocacy.
-                    </p>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <!-- Clothe a Child Program Section -->
     <section id="program" class="py-24 px-6 bg-gray-900 text-white">
         <div class="max-w-6xl mx-auto">
-            
             <div class="text-center mb-16">
-                <h2 class="text-alat-orange font-bold tracking-widest uppercase mb-3">Flagship Initiative</h2>
+                <h2 class="text-alat-orange font-bold tracking-widest uppercase mb-3 text-sm">Flagship Initiative</h2>
                 <h3 class="text-4xl md:text-5xl font-extrabold mb-6">The "Clothe a Child" Program</h3>
                 <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
-                    We believe that a child’s self-esteem shouldn't be limited by the fabric they wear. Our program is a strategic intervention to restore pride and confidence.
+                    We believe that a child’s self-esteem shouldn't be limited by the fabric they wear. 
                 </p>
             </div>
 
-            <!-- The 3-Step Impact -->
-            <div class="grid md:grid-cols-3 gap-12 mb-20">
-                <div class="group">
-                    <div class="text-5xl mb-6 group-hover:scale-110 transition transform duration-300">👕</div>
-                    <h4 class="text-2xl font-bold mb-4 text-alat-orange">Dignified Selection</h4>
-                    <p class="text-gray-400">We don't just provide "hand-me-downs." We curate high-quality, clean, and vibrant clothing that any child would be proud to wear.</p>
+            <div class="grid md:grid-cols-3 gap-12 mb-20 text-center">
+                <div>
+                    <div class="text-5xl mb-6">👕</div>
+                    <h4 class="text-xl font-bold mb-4 text-alat-orange uppercase">Dignity First</h4>
+                    <p class="text-gray-400 text-sm">We curate high-quality, clean, and vibrant clothing that any child would be proud to wear.</p>
                 </div>
-                <div class="group">
-                    <div class="text-5xl mb-6 group-hover:scale-110 transition transform duration-300">✨</div>
-                    <h4 class="text-2xl font-bold mb-4 text-alat-orange">Confidence Boost</h4>
-                    <p class="text-gray-400">Good clothing adds to personal pride. When a child feels they look good, they find the courage to speak up and engage with the world.</p>
+                <div>
+                    <div class="text-5xl mb-6">✨</div>
+                    <h4 class="text-xl font-bold mb-4 text-alat-orange uppercase">Self-Esteem</h4>
+                    <p class="text-gray-400 text-sm">Good clothing adds to pride. When a child looks good, they find the courage to speak up.</p>
                 </div>
-                <div class="group">
-                    <div class="text-5xl mb-6 group-hover:scale-110 transition transform duration-300">🎓</div>
-                    <h4 class="text-2xl font-bold mb-4 text-alat-orange">Academic Expression</h4>
-                    <p class="text-gray-600">A confident child stays in school. By removing the shame of tattered clothing, we increase school attendance and participation.</p>
+                <div>
+                    <div class="text-5xl mb-6">🎓</div>
+                    <h4 class="text-xl font-bold mb-4 text-alat-orange uppercase">Education</h4>
+                    <p class="text-gray-400 text-sm">By removing the shame of poverty, we increase school attendance and participation.</p>
                 </div>
             </div>
-
-            <!-- Image Call-to-Action -->
-            <div class="relative rounded-[3rem] overflow-hidden h-96 shadow-2xl">
-                <img src="https://i.postimg.cc/zft42L9v/Whats-App-Image-2026-02-21-at-08-03-01.jpg" alt="Impact outreach" class="w-full h-full object-cover opacity-60">
-                <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-                    <h4 class="text-3xl md:text-4xl font-bold mb-6 italic">"Confidence starts with a stitch."</h4>
-                    <a href="https://instagram.com/alatfoundation" target="_blank" class="bg-white text-gray-900 px-8 py-3 rounded-full font-bold hover:bg-alat-orange hover:text-white transition">See Latest Outreaches</a>
-                </div>
-            </div>
-
-            <!-- Stats Bar -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 text-center border-t border-gray-800 pt-16">
-                <div>
-                    <span class="block text-4xl font-extrabold text-alat-orange mb-2">500+</span>
-                    <span class="text-gray-500 uppercase tracking-widest text-xs">Children Clothed</span>
-                </div>
-                <div>
-                    <span class="block text-4xl font-extrabold text-alat-orange mb-2">10+</span>
-                    <span class="text-gray-500 uppercase tracking-widest text-xs">Communities Reached</span>
-                </div>
-                <div>
-                    <span class="block text-4xl font-extrabold text-alat-orange mb-2">1,000+</span>
-                    <span class="text-gray-500 uppercase tracking-widest text-xs">Meals Provided</span>
-                </div>
-                <div>
-                    <span class="block text-4xl font-extrabold text-alat-orange mb-2">100%</span>
-                    <span class="text-gray-500 uppercase tracking-widest text-xs">Dignity Driven</span>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <!-- SDG Section -->
-    <section id="goals" class="bg-gray-50 py-24 px-6">
+    <section id="goals" class="bg-gray-50 py-24 px-6 text-center">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Aligned with Global Goals</h2>
-                <p class="text-gray-500 max-w-2xl mx-auto text-lg">Our mission is strategically designed to support the UN Sustainable Development Goals.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <!-- SDG 2 -->
-                <div class="bg-white p-10 rounded-3xl shadow-sm border-t-8 border-yellow-500 hover:shadow-xl transition">
-                    <div class="text-5xl mb-6">🥗</div>
+            <h2 class="text-4xl font-bold mb-4 text-gray-900">Aligned with Global Goals</h2>
+            <p class="text-gray-500 max-w-2xl mx-auto text-lg mb-16 text-center">Our mission is strategically designed to support the UN SDGs.</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-3xl shadow-sm border-t-8 border-yellow-500">
+                    <div class="text-4xl mb-6">🥗</div>
                     <h4 class="text-xl font-bold mb-4">SDG 2: Zero Hunger</h4>
-                    <p class="text-gray-500 leading-relaxed">Providing nutritional support because a child cannot grow or learn on an empty stomach.</p>
+                    <p class="text-gray-500 text-sm">Providing nutritional support because a child cannot learn on an empty stomach.</p>
                 </div>
-                <!-- SDG 3 -->
-                <div class="bg-white p-10 rounded-3xl shadow-sm border-t-8 border-green-500 hover:shadow-xl transition">
-                    <div class="text-5xl mb-6">💪</div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm border-t-8 border-green-500">
+                    <div class="text-4xl mb-6">💪</div>
                     <h4 class="text-xl font-bold mb-4">SDG 3: Well-being</h4>
-                    <p class="text-gray-500 leading-relaxed">Focusing on mental health and hygiene to ensure children thrive physically and emotionally.</p>
+                    <p class="text-gray-500 text-sm">Focusing on mental health and hygiene to ensure children thrive emotionally.</p>
                 </div>
-                <!-- SDG 4 -->
-                <div class="bg-white p-10 rounded-3xl shadow-sm border-t-8 border-red-500 hover:shadow-xl transition">
-                    <div class="text-5xl mb-6">📚</div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm border-t-8 border-red-500">
+                    <div class="text-4xl mb-6">📚</div>
                     <h4 class="text-xl font-bold mb-4">SDG 4: Education</h4>
-                    <p class="text-gray-500 leading-relaxed">Providing school attire that removes the shame of poverty and encourages attendance.</p>
+                    <p class="text-gray-500 text-sm">Providing school attire that encourages attendance and academic excellence.</p>
                 </div>
             </div>
         </div>
     </section>
 
-      <!-- Support Section -->
+    <!-- Support Section -->
     <section id="donate" class="py-24 px-6 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
@@ -334,30 +200,27 @@
                 <h3 class="text-4xl font-extrabold text-gray-900">How You Can Help</h3>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Financial -->
-                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 shadow-sm">
-                    <div class="text-3xl mb-4">💳</div>
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 shadow-sm text-center">
+                    <div class="text-3xl mb-4 text-center">💳</div>
                     <h4 class="text-xl font-bold mb-4">Financial Support</h4>
                     <div class="bg-white p-4 rounded-xl border border-gray-200 mb-6">
                         <p class="text-[10px] text-gray-400 uppercase font-bold mb-1">Sterling Bank</p>
                         <p class="text-sm font-bold text-gray-900">Alat Oladimeji Foundation</p>
                         <p class="text-alat-orange font-bold text-xl tracking-tighter">0082348873</p>
                     </div>
-                    <a href="mailto:info@alatfoundation.org" class="block text-center bg-alat-orange text-white py-3 rounded-xl font-bold text-sm">Email Receipt</a>
+                    <a href="mailto:info@alatfoundation.org" class="block bg-alat-orange text-white py-3 rounded-xl font-bold text-sm">Email Receipt</a>
                 </div>
-                <!-- Items -->
-                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 shadow-sm">
-                    <div class="text-3xl mb-4">📦</div>
-                    <h4 class="text-xl font-bold mb-4">Donate Items</h4>
-                    <p class="text-gray-600 text-sm mb-6">We accept gently used children's clothes, shoes, and school bags.</p>
-                    <a href="https://wa.me/2348164844262" target="_blank" class="block text-center border-2 border-alat-orange text-alat-orange py-3 rounded-xl font-bold text-sm">WhatsApp for Drop-off</a>
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 shadow-sm text-center">
+                    <div class="text-3xl mb-4 text-center">📦</div>
+                    <h4 class="text-xl font-bold mb-4 text-center">Donate Items</h4>
+                    <p class="text-gray-600 text-sm mb-6">We accept gently used clothes, shoes, and school bags.</p>
+                    <a href="https://wa.me/2348164844262" target="_blank" class="block border-2 border-alat-orange text-alat-orange py-3 rounded-xl font-bold text-sm">WhatsApp for Drop-off</a>
                 </div>
-                <!-- Volunteer -->
-                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 shadow-sm">
-                    <div class="text-3xl mb-4">🤝</div>
-                    <h4 class="text-xl font-bold mb-4">Volunteer</h4>
-                    <p class="text-gray-600 text-sm mb-6">Join our team for the next community outreach. Your time matters.</p>
-                    <a href="mailto:info@alatfoundation.org" class="block text-center bg-gray-900 text-white py-3 rounded-xl font-bold text-sm">Join the Team</a>
+                <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100 shadow-sm text-center">
+                    <div class="text-3xl mb-4 text-center">🤝</div>
+                    <h4 class="text-xl font-bold mb-4 text-center">Volunteer</h4>
+                    <p class="text-gray-600 text-sm mb-6 text-center">Join our team for the next community outreach.</p>
+                    <a href="mailto:info@alatfoundation.org" class="block bg-gray-900 text-white py-3 rounded-xl font-bold text-sm">Join the Team</a>
                 </div>
             </div>
         </div>
@@ -366,47 +229,23 @@
     <!-- Footer -->
     <footer class="py-16 bg-gray-900 text-white text-center px-6">
         <div class="mb-8">
-            <img src="https://i.postimg.cc/BvmR7hjb/Untitled-design-(5).png" alt="Alat Foundation Logo" class="h-20 md:h-24">
-            <p class="text-gray-400 mt-4 max-w-md mx-auto">Confidence starts with a stitch. Helping every child find their full expression.</p>
+            <img src="https://i.postimg.cc/BvmR7hjb/Untitled-design-(5).png" alt="Logo" class="h-16 mx-auto mb-6">
+            <p class="text-gray-400 text-sm max-w-md mx-auto">Confidence starts with a stitch. Helping every child find their full expression.</p>
         </div>
-        <div class="flex justify-center space-x-8 mb-10 font-medium">
-            <a href="https://instagram.com/alatfoundation" target="_blank" class="hover:text-alat-orange transition">Instagram</a>
-            <a href="mailto:info@alatfoundation.org" class="hover:text-alat-orange transition">Email Us</a>
+        <div class="flex justify-center space-x-8 mb-10 text-sm">
+            <a href="https://instagram.com/alatfoundation" target="_blank" class="text-gray-400 hover:text-white">Instagram</a>
+            <a href="mailto:info@alatfoundation.org" class="text-gray-400 hover:text-white">Email Us</a>
         </div>
-        <div class="border-t border-gray-800 pt-8">
-            <p class="text-sm text-gray-500">&copy; 2024 Alat Oladimeji Foundation. All rights reserved.</p>
-        </div>
+        <p class="text-xs text-gray-600 uppercase tracking-widest">&copy; 2024 Alat Oladimeji Foundation</p>
     </footer>
 
     <script>
-  var swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-</script>
-
-<style>
-  .swiper-button-next, .swiper-button-prev {
-    background-color: rgba(251, 176, 64, 0.3); /* Transparent Alat Orange */
-    padding: 30px;
-    border-radius: 50%;
-    transform: scale(0.6);
-  }
-  .swiper-pagination-bullet-active {
-    background: #FBB040 !important; /* Alat Orange dots */
-  }
-</style>
-
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: { el: ".swiper-pagination", clickable: true },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        });
+    </script>
 </body>
 </html>
