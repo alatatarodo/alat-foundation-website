@@ -31,12 +31,23 @@
 
     <!-- Hero Section -->
     <section class="relative h-[85vh] flex items-center justify-center text-center text-white bg-gray-900 overflow-hidden">
-        <!-- Your Updated Photo -->
-        <div class="absolute inset-0 opacity-50 bg-cover bg-center" style="background-image: url('https://i.postimg.cc/zft42L9v/Whats-App-Image-2026-02-21-at-08-03-01.jpg');"></div>
+        
+        <!-- Image with Adjusted Focal Point -->
+        <div class="absolute inset-0 bg-cover" 
+             style="background-image: url('https://i.postimg.cc/zft42L9v/Whats-App-Image-2026-02-21-at-08-03-01.jpg'); 
+                    background-position: center 15%;">
+        </div>
+
+        <!-- Darker Gradient Overlay (Fixes the "Overly Bold" / Readability issue) -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70"></div>
         
         <div class="relative z-10 px-4">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight drop-shadow-lg">Clothing a Child.<br>Building a Leader.</h1>
-            <p class="text-lg md:text-2xl mb-10 max-w-3xl mx-auto font-light drop-shadow-md">Building self-esteem in impoverished children through dignity and the "Clothe a Child" program.</p>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight drop-shadow-2xl">
+                Clothing a Child.<br>Building a Leader.
+            </h1>
+            <p class="text-lg md:text-2xl mb-10 max-w-3xl mx-auto font-light drop-shadow-lg">
+                Building self-esteem in impoverished children through dignity and the "Clothe a Child" program.
+            </p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
                 <a href="#about" class="bg-alat-orange text-white px-10 py-4 rounded-full font-bold text-xl shadow-2xl hover:scale-105 transition transform">Our Impact</a>
                 <a href="https://instagram.com/alatfoundation" target="_blank" class="bg-white text-gray-900 px-10 py-4 rounded-full font-bold text-xl shadow-2xl hover:scale-105 transition transform">Follow Our Journey</a>
