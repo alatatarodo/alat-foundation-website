@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,10 +32,11 @@
     </nav>
 
     <!-- Hero Section: Split Layout -->
+  <!-- Hero Section: Split Layout with Slider -->
     <section class="relative min-h-[90vh] flex flex-col md:flex-row items-center bg-gray-50 overflow-hidden">
         
         <!-- Left Side: Text -->
-        <div class="w-full md:w-1/2 px-8 py-20 md:px-16 z-10">
+        <div class="w-full md:w-1/2 px-8 py-20 md:px-16 z-20 bg-gray-50">
             <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
                 Clothing a <span class="text-alat-orange">Child.</span><br>
                 Building a <span class="text-alat-orange">Leader.</span>
@@ -47,13 +50,28 @@
             </div>
         </div>
 
-        <!-- Right Side: The Image (Uncut) -->
-        <div class="w-full md:w-1/2 h-[50vh] md:h-[90vh] relative">
-            <div class="absolute inset-0 bg-cover bg-top" 
-                 style="background-image: url('https://i.postimg.cc/9f0xxZsY/Whats-App-Image-2026-02-21-at-16-35-22.jpg');">
+        <!-- Hero Section: Split Layout with Slider -->
+        <div class="w-full md:w-1/2 h-[60vh] md:h-[90vh] relative">
+            <div class="swiper mySwiper h-full w-full">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide bg-cover bg-top" style="background-image: url('https://i.postimg.cc/9f0xxZsY/Whats-App-Image-2026-02-21-at-16-35-22.jpg');"></div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide bg-cover bg-top" style="background-image: url('https://i.postimg.cc/pVCst0xf/Whats-App-Image-2026-02-21-at-16-35-32.jpg');"></div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide bg-cover bg-top" style="background-image: url('https://i.postimg.cc/Gh7r9JP2/Whats-App-Image-2026-02-21-at-17-58-42.jpg');"></div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide bg-cover bg-top" style="background-image: url('https://i.postimg.cc/Vs4PHBVW/Whats-App-Image-2026-02-21-at-17-58-07.jpg');"></div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide bg-cover bg-top" style="background-image: url('https://i.postimg.cc/ZK9sF8tL/Whats-App-Image-2026-02-21-at-17-58-22.jpg');"></div>
+                </div>
+                <!-- Slider Controls -->
+                <div class="swiper-button-next text-white"></div>
+                <div class="swiper-button-prev text-white"></div>
+                <div class="swiper-pagination"></div>
             </div>
             <!-- Soft fade for mobile -->
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-50 md:hidden"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-gray-50 md:hidden z-10 pointer-events-none"></div>
         </div>
 
     </section>
