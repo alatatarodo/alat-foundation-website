@@ -30,16 +30,41 @@
         <div class="flex items-center">
             <img src="https://i.postimg.cc/BvmR7hjb/Untitled-design-(5).png" alt="Alat Foundation Logo" class="h-16 md:h-20">
         </div>
-        <div class="hidden md:flex space-x-6 lg:space-x-8 font-medium">
+
+        <!-- Desktop Links (Visible only on Laptop/Tablet) -->
+        <div class="hidden md:flex space-x-4 lg:space-x-8 font-medium">
             <a href="#about" class="hover:text-alat-orange transition text-sm lg:text-base">Our Story</a>
             <a href="#team" class="hover:text-alat-orange transition text-sm lg:text-base">The Team</a>
             <a href="#program" class="hover:text-alat-orange transition text-sm lg:text-base">Clothe a Child</a>
             <a href="#goals" class="hover:text-alat-orange transition text-sm lg:text-base">Our Goals</a>
-            <a href="#awards" class="hover:text-alat-orange transition text-sm">Awards</a>
+            <a href="#awards" class="hover:text-alat-orange transition text-sm lg:text-base">Awards</a>
             <a href="#donate" class="hover:text-alat-orange transition text-sm lg:text-base text-alat-orange font-bold">Support Us</a>
         </div>
-        <a href="mailto:info@alatfoundation.org" class="bg-alat-orange text-white px-5 py-2 rounded-full font-bold shadow-lg hover:bg-orange-400 transition text-sm">Contact Us</a>
+
+        <!-- Mobile Menu Toggle Button (Visible only on Phone) -->
+        <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Contact Button (Desktop) -->
+        <a href="mailto:info@alatfoundation.org" class="hidden md:block bg-alat-orange text-white px-5 py-2 rounded-full font-bold shadow-lg hover:bg-orange-400 transition text-sm">Contact Us</a>
     </nav>
+
+    <!-- Mobile Menu Overlay (Popup when hamburger is clicked) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center space-y-8 text-2xl font-bold hidden">
+        <button id="close-btn" class="absolute top-6 right-8 text-gray-500 text-5xl">&times;</button>
+        <a href="#about" class="mobile-link hover:text-alat-orange">Our Story</a>
+        <a href="#team" class="mobile-link hover:text-alat-orange">The Team</a>
+        <a href="#program" class="mobile-link hover:text-alat-orange">Clothe a Child</a>
+        <a href="#goals" class="mobile-link hover:text-alat-orange">Our Goals</a>
+        <a href="#awards" class="mobile-link hover:text-alat-orange">Awards</a>
+        <a href="#donate" class="mobile-link text-alat-orange">Support Us</a>
+        <a href="mailto:info@alatfoundation.org" class="bg-alat-orange text-white px-8 py-3 rounded-full text-lg">Contact Us</a>
+    </div>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex flex-col md:flex-row items-center bg-gray-50 overflow-hidden">
@@ -370,5 +395,29 @@
             navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
         });
     </script>
+    <script>
+    // Logic for Mobile Menu
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    // Open Menu
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.remove('hidden');
+    });
+
+    // Close Menu
+    closeBtn.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+
+    // Close Menu when any link is clicked
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    });
+</script>
 </body>
 </html>
