@@ -31,28 +31,44 @@
             <img src="https://i.postimg.cc/BvmR7hjb/Untitled-design-(5).png" alt="Alat Foundation Logo" class="h-16 md:h-20">
         </div>
 
-        <!-- Desktop Links (Visible only on Laptop/Tablet) -->
-        <div class="hidden md:flex space-x-4 lg:space-x-8 font-medium">
-            <a href="#about" class="hover:text-alat-orange transition text-sm lg:text-base">About Us</a>          
-            <a href="#team" class="hover:text-alat-orange transition text-sm lg:text-base">The Team</a>
-            <a href="#volunteers" class="text-gray-700 hover:text-alat-orange transition text-sm lg:text-base whitespace-nowrap">Volunteers</a>
-            <a href="#program" class="hover:text-alat-orange transition text-sm lg:text-base">Clothe a Child</a>
-            <a href="#goals" class="hover:text-alat-orange transition text-sm lg:text-base">Our Goals</a>
-            <a href="#awards" class="hover:text-alat-orange transition text-sm lg:text-base">Awards</a>
-            <a href="#donate" class="hover:text-alat-orange transition text-sm lg:text-base text-alat-orange font-bold">Support Us</a>
+        <!-- Desktop Links: Tidy Version with Specific Dropdown (Visible on Laptops) -->
+        <div class="hidden lg:flex flex-1 justify-center items-center px-4">
+            <div class="flex items-center gap-x-5 xl:gap-x-8 font-medium text-gray-700">
+                
+                <!-- DROPDOWN: ABOUT -->
+                <div class="relative group py-4">
+                    <button class="flex items-center gap-1 hover:text-alat-orange transition text-sm lg:text-base cursor-default whitespace-nowrap outline-none leading-none">
+                        About 
+                        <svg class="w-4 h-4 mt-0.5 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    
+                    <!-- The Dropdown Menu: Contains only the 3 items you requested -->
+                    <div class="absolute hidden group-hover:block top-full -left-4 w-52 bg-white shadow-2xl rounded-b-2xl border-t-2 border-alat-orange py-4 z-50 animate-in fade-in slide-in-from-top-2 duration-300">
+                        <a href="#about" class="block px-6 py-3 text-sm hover:bg-gray-50 hover:text-alat-orange transition">About Us</a>
+                        <a href="#team" class="block px-6 py-3 text-sm hover:bg-gray-50 hover:text-alat-orange transition">The Team</a>
+                        <a href="#partners" class="block px-6 py-3 text-sm hover:bg-gray-50 hover:text-alat-orange transition">Our Partners</a>
+                    </div>
+                </div>
+
+                <!-- Main Navigation Links -->
+                <a href="#program" class="hover:text-alat-orange transition text-sm lg:text-base whitespace-nowrap leading-none">Clothe a Child</a>
+                <a href="#volunteers" class="hover:text-alat-orange transition text-sm lg:text-base whitespace-nowrap leading-none">Volunteers</a>
+                <a href="#goals" class="hover:text-alat-orange transition text-sm lg:text-base whitespace-nowrap leading-none">Our Goals</a>
+                <a href="#awards" class="hover:text-alat-orange transition text-sm lg:text-base whitespace-nowrap leading-none">Awards</a>
+                <a href="#donate" class="text-alat-orange hover:text-orange-600 transition text-sm lg:text-base font-bold whitespace-nowrap leading-none">Support Us</a>
+            </div>
         </div>
 
-        <!-- Mobile Menu Toggle Button (Visible only on Phone) -->
-        <div class="md:hidden flex items-center">
-            <button id="menu-btn" class="text-gray-700 focus:outline-none">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
+        <!-- Right Side: Toggle & Contact Button -->
+        <div class="flex items-center flex-shrink-0 gap-4">
+            <!-- Mobile Menu Toggle -->
+            <button id="menu-btn" class="lg:hidden text-gray-700 focus:outline-none p-2">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
-        </div>
 
-        <!-- Contact Button (Desktop) -->
-        <a href="mailto:info@alatfoundation.org" class="hidden md:block bg-alat-orange text-white px-5 py-2 rounded-full font-bold shadow-lg hover:bg-orange-400 transition text-sm">Contact Us</a>
+            <!-- Contact Button -->
+            <a href="mailto:info@alatfoundation.org" class="hidden lg:block bg-alat-orange text-white px-6 py-2.5 rounded-full font-bold shadow-lg hover:bg-orange-400 transition text-sm whitespace-nowrap">Contact Us</a>
+        </div>
     </nav>
 
     <!-- Mobile Menu Overlay (Popup when hamburger is clicked) -->
